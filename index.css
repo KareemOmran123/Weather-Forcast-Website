@@ -1,0 +1,177 @@
+/* Reset all margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Container Styling */
+.container {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 350px;
+  text-align: center;
+}
+
+/* Weather Info Styling */
+#weatherInfo {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#weatherIcon {
+  margin: 15px 0;
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: none;
+}
+
+#temperature,
+#description {
+  font-size: 1.1rem;
+  margin: 5px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 8px 0;
+}
+
+/* Input Field Styling */
+input {
+  padding: 10px;
+  width: 80%;
+  margin: 10px auto;
+  border: none;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* Button Styling */
+button {
+  background-color: #ffd700;
+  border: none;
+  border-radius: 20px;
+  padding: 12px 20px;
+  cursor: pointer;
+  margin: 10px;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #ffcc00;
+}
+
+button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+}
+
+.favorites-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+.favorites-container button {
+  padding: 8px 12px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.favorites-container button:hover {
+  background-color: #ffcc00;
+}
+
+.favorite-city-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 5px 0;
+}
+
+.city-button {
+  flex: 2;
+  padding: 10px;
+  background-color: #ffd700;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+}
+
+.city-button:hover {
+  background-color: #ffcc00;
+}
+
+.remove-button {
+  flex: 1; /* Make the remove button larger */
+  padding: 5px;
+  background-color: #ff4c4c;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 12px;
+}
+
+.remove-button:hover {
+  background-color: #ff6666;
+}
+
+/* Loader Styling */
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 400px) {
+  .forcast-card {
+    flex: 1 1 100%;
+  }
+}
