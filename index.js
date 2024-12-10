@@ -110,7 +110,7 @@ function displayWeather(data) {
 
   hideLoader();
 
-  const hour = localTime.getUTCHours();
+  const hour = localTime.getHours();
   const isNightTime = hour >= 18 || hour < 6;
   updateBackground(data.weather[0].main.toLowerCase(), isNightTime);
 }
